@@ -1,7 +1,8 @@
 extends layout
 
-link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
-script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
+block head
+  link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
 
 
 block content
@@ -9,7 +10,7 @@ block content
 
 
 
-  p Welcome to 3 #{title}
+  p Welcome to 4 #{title}
 
   form(method="post", action="/create")
         input(type="id",name="id",placeholder="Introduce id")
