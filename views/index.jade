@@ -1,36 +1,46 @@
 extends layout
 
-
-
-
 block content
+
+  div.top
+    form.form-horizontal(method="post", id="loginForm")
+      label Username
+      input.span3(id="username", type="text", name="User", placeholder="Enter your username")
+      label Password
+      input.span3(id="password", type="password", name="Password")
+      input.btn(type="submit", value="Log In")
+      
   h1= title
+  
+  div.container
+    div.content
 
-
-
-  p Welcome to 4 #{title}
-
-  form(method="post", action="/create")
-        input(type="id",name="id",placeholder="Introduce id")
-        input(type="text",name="username",placeholder="Introduce username")
-        input(type="password",name="password",placeholder="Introduce password")
-        input(type="submit",value="create")
-
-
-   p usuarios :  #{usuarios}
-
-   form(method="post", action="/sign")
-       input(type="text",name="username",placeholder="Introduce algo")
-       input(type="password",name="password",placeholder="Introduce algo")
-       input(type="submit",value="sign")
-
-    p usuario :  #{user}
-
-    p token t:  #{jwt}
-
-    form(method="post", action="/decode")
-        input(type="hidden",name="token" value="#{jwt}" )
-        input(type="submit",value="decodificar")
-
-    p header :  #{header}
-    p payload :  #{payload}
+      p Welcome to 4 #{title}
+    
+      form(method="post", action="/create")
+            label Id
+            input(type="id",name="id",placeholder="Introduce id")
+            label Username
+            input(type="text",name="username",placeholder="Introduce username")
+            label Password
+            input(type="password",name="password",placeholder="Introduce password")
+            input(type="submit",value="create")
+    
+    
+       p usuarios :  #{usuarios}
+    
+       form(method="post", action="/sign")
+           input(type="text",name="username",placeholder="Introduce algo")
+           input(type="password",name="password",placeholder="Introduce algo")
+           input(type="submit",value="sign")
+    
+        p usuario :  #{user}
+    
+        p token t:  #{jwt}
+    
+        form(method="post", action="/decode")
+            input(type="hidden",name="token" value="#{jwt}" )
+            input(type="submit",value="decodificar")
+    
+        p header :  #{header}
+        p payload :  #{payload}
