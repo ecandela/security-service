@@ -4,6 +4,22 @@ var router = express.Router();
 var jwt = require('jsonwebtoken');
 
 
+router.get('/api200', function(req, res) {
+    res.json({ message: 'API Security Token' }); 
+    res.sendStatus(200);
+});
+
+router.get('/api403', function(req, res) {
+    res.json({ message: 'API Security Token' }); 
+    res.sendStatus(403);
+});
+
+router.get('/api500', function(req, res) {
+    res.json({ message: 'API Security Token' }); 
+    res.sendStatus(500);
+});
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
