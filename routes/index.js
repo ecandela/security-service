@@ -6,17 +6,17 @@ var jwt = require('jsonwebtoken');
 
 router.get('/api200', function(req, res) {
     res.json({ message: 'API Security Token' }); 
-    res.sendStatus(200);
+    res.status(200);
 });
 
 router.get('/api403', function(req, res) {
     res.json({ message: 'API Security Token' }); 
-    res.sendStatus(403);
+    res.status(403);
 });
 
 router.get('/api500', function(req, res) {
     res.json({ message: 'API Security Token' }); 
-    res.sendStatus(500);
+    res.status(500);
 });
 
 
