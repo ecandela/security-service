@@ -5,18 +5,23 @@ var jwt = require('jsonwebtoken');
 
 
 router.get('/api200', function(req, res) {
-    res.json({ message: 'API Security Token' }); 
+    
     res.status(200);
+    res.json({ message: 'API Security Token' }); 
+    
 });
 
 router.get('/api403', function(req, res) {
-    res.json({ message: 'API Security Token' }); 
+    
     res.status(403);
+    res.json({ message: 'API Security Token' }); 
+ 
 });
 
 router.get('/api500', function(req, res) {
+    res.status(500).send({ error: "boo:(" });
     res.json({ message: 'API Security Token' }); 
-    res.status(500);
+  
 });
 
 
