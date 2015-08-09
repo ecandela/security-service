@@ -4,6 +4,9 @@ var router = express.Router();
 var jwt = require('jsonwebtoken');
 
 
+
+
+
 router.get('/api200', function(req, res) {
     
     res.status(200);
@@ -95,7 +98,7 @@ router.post('/create', function(req, res) {
 
     collection.insert({ id: req.body.id, username: req.body.username ,password:req.body.password });
 
-    res.render('index', { title: 'Usuario creado' });
+    res.render('index', { title: 'Usuario creado'+req.body.username });
 
 });
 
