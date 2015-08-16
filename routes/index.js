@@ -14,7 +14,6 @@ router.post('/rest/sign', function(req, res) {
     
         res.status(200);
         res.json({ 
-            jwt:token,
             message: 'Usuario autenticado correctamente' 
         }); 
 });
