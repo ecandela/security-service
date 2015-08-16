@@ -24,7 +24,7 @@ router.post('/rest/sign', function(req, res) {
 router.get('/api200', function(req, res) {
     
     res.status(200);
-    res.json({ message: 'API Security Token' }); 
+    res.json({ message: 'API Security Tokenc2' }); 
     
 });
 
