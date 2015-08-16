@@ -4,20 +4,7 @@ var router = express.Router();
 var jwt = require('jsonwebtoken');
 
 
-router.post('/login', function(req, res) {
-    
-    var db = req.db;
-    var users = db.get('userlist');
-    users.findOne({ username: req.body.username }).on('success', function (doc) {
 
-        var token = jwt.sign({"username": req.body.username,"password":req.body.password}, 'shhhhh');
-    
-        res.status(200);
-        res.json({ 
-            
-            message: 'Usuario autenticado correctamente' 
-        }); 
-});
 
 
 
